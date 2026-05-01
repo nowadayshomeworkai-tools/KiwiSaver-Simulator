@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>KiwiSaver Simulator</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<h1>KiwiSaver Simulator</h1>
+
+<label>Age:</label> <input id="age" value="30"><br><br>
+
+<label>Balance:</label> <input id="balance" value="10000"><br><br>
+
+<label>Salary:</label> <input id="salary"><br><br>
+
+<label>Business:</label> <input id="business"><br><br>
+
+<select id="strategy">
+  <option value="0.99">High Growth</option>
+  <option value="0.80">Growth</option>
+  <option value="0.60">Balanced</option>
+  <option value="0.25">Conservative</option>
+</select><br><br>
+
+<button onclick="runSim()">Run</button>
+
+<h2 id="result"></h2>
+
+<canvas id="chart"></canvas>
+
+<script src="script.js"></script>
+
+</body>
+</html>
