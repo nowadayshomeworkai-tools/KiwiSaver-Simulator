@@ -2,40 +2,49 @@
 
 <html>
 <head>
-  <title>KiwiSaver Simulator</title>
+  <title>KiwiSaver Growth Simulator Pro</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body>
+<body style="font-family: Arial; padding:20px;">
 
-<h1>KiwiSaver Simulator</h1>
+<h1>KiwiSaver Growth Simulator (Pro)</h1>
 
-<label>Current Age:</label><br> <input id="age" value="30"><br><br>
+<label>Current Age:</label><br> <input id="age" type="number" value="30"><br><br>
 
-<label>Retirement Age (max 90):</label><br> <input id="retire" value="65"><br><br>
+<label>Current Balance ($):</label><br> <input id="balance" type="number" value="10000"><br><br>
 
-<label>Current Balance ($):</label><br> <input id="balance" value="10000"><br><br>
+<h3>Income Inputs</h3>
 
-<label>Annual Income ($):</label><br> <input id="income" value="70000"><br><br>
+<label>Salary Income ($):</label><br> <input id="salary"><br><br>
+
+<label>Business Income ($):</label><br> <input id="business"><br><br>
 
 <label>Strategy:</label><br> <select id="strategy">
 
-  <option value="0.99">High Growth (99/1)</option>
-  <option value="0.80">Growth (80/20)</option>
-  <option value="0.60">Balanced (60/40)</option>
-  <option value="0.25">Conservative (25/75)</option>
+  <option value="0.99">High Growth</option>
+  <option value="0.80">Growth</option>
+  <option value="0.60">Balanced</option>
+  <option value="0.25">Conservative</option>
 </select><br><br>
 
 <button onclick="runSim()">Run Simulation</button>
 
 <h2 id="result"></h2>
 
-<canvas id="growthChart"></canvas> <canvas id="pieChart"></canvas>
+<h3>Growth (Nominal vs Fees vs Real)</h3>
+<canvas id="growthChart"></canvas>
 
-<h3>Disclaimer</h3>
+<h3>Asset Allocation</h3>
+<canvas id="pieChart"></canvas>
+
+<h3>Assumptions & Disclaimer</h3>
 <p>
-This tool uses assumed returns (7% growth, 3.5% income). Contributions assumed at 6% total (3% employee + 3% employer). 
-Actual KiwiSaver returns vary. This is not financial advice.
+This tool provides general financial modelling only and does not constitute financial advice.
+Contribution rates are modelled at 3.5% employee and 3.5% employer for salary income (7% total), 
+and 3.5% for self-employed income. Actual KiwiSaver contribution rates are subject to Inland Revenue rules.
+Returns assumed: 7% (growth assets), 3.5% (income assets), inflation 2.5%, fees 1%.
+Results are estimates only and actual outcomes will vary.
 </p>
 
 <script src="script.js"></script>
