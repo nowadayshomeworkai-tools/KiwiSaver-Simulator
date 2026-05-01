@@ -24,7 +24,6 @@ for (let i = age; i <= 90; i++) {
 const r = (strategy * growthReturn) + (incomeRatio * incomeReturn);
 value = value * (1 + r) + contribution;
 
-```
 labels.push(i);
 data.push(Math.round(value));
 ```
