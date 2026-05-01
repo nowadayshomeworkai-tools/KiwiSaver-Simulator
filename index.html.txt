@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>KiwiSaver Simulator</title>
+</head>
+
+<body>
+
+<h1>KiwiSaver Growth Simulator</h1>
+
+<label>Starting Amount ($)</label><br> <input id="start" value="10000"><br><br>
+
+<label>Years</label><br> <input id="years" value="30"><br><br>
+
+<label>Choose Strategy</label><br> <select id="strategy">
+
+  <option value="0.99">High Growth (99/1)</option>
+  <option value="0.80">Growth (80/20)</option>
+  <option value="0.60">Balanced (60/40)</option>
+  <option value="0.25">Conservative (25/75)</option>
+</select><br><br>
+
+<button onclick="runCalc()">Calculate</button>
+
+<h2 id="output"></h2>
+
+<script src="script.js"></script>
+
+</body>
+</html>
