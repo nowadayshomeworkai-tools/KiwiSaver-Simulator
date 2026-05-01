@@ -1,3 +1,4 @@
+alert("script loaded");
 let growthChart;
 let pieChart;
 
