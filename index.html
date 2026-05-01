@@ -3,17 +3,22 @@
 <html>
 <head>
   <title>KiwiSaver Simulator</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
-<h1>KiwiSaver Growth Simulator</h1>
+<h1>KiwiSaver Simulator</h1>
 
-<label>Starting Amount ($)</label><br> <input id="start" value="10000"><br><br>
+<label>Current Age:</label><br> <input id="age" value="30"><br><br>
 
-<label>Years</label><br> <input id="years" value="30"><br><br>
+<label>Retirement Age (max 90):</label><br> <input id="retire" value="65"><br><br>
 
-<label>Choose Strategy</label><br> <select id="strategy">
+<label>Current Balance ($):</label><br> <input id="balance" value="10000"><br><br>
+
+<label>Annual Income ($):</label><br> <input id="income" value="70000"><br><br>
+
+<label>Strategy:</label><br> <select id="strategy">
 
   <option value="0.99">High Growth (99/1)</option>
   <option value="0.80">Growth (80/20)</option>
@@ -21,9 +26,17 @@
   <option value="0.25">Conservative (25/75)</option>
 </select><br><br>
 
-<button onclick="runCalc()">Calculate</button>
+<button onclick="runSim()">Run Simulation</button>
 
-<h2 id="output"></h2>
+<h2 id="result"></h2>
+
+<canvas id="growthChart"></canvas> <canvas id="pieChart"></canvas>
+
+<h3>Disclaimer</h3>
+<p>
+This tool uses assumed returns (7% growth, 3.5% income). Contributions assumed at 6% total (3% employee + 3% employer). 
+Actual KiwiSaver returns vary. This is not financial advice.
+</p>
 
 <script src="script.js"></script>
 
